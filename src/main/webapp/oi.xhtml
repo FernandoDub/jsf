@@ -25,6 +25,26 @@
 		<h:outputLabel value="Nome: #{alfredoController.nome}" />
 		<br/>
 		<h:outputLabel value="Idade: #{alfredoController.idade}" />
+		
+		<br/>
+		<br/>
+		
+		<h:inputText name="campo1" id="campo1"
+		    value="#{calculadoraController.valor1}" />
+		    
+		<h:commandButton name="btnOperacaoSomar" id="btnOperacaoSomar"
+		    value="+" 
+		    action="#{calculadoraController.somar()}"/>
+		   
+		<h:inputText name="campo2" id="campo2"
+		    value="#{calculadoraController.valor2}" />
+		    
+		<h:commandButton id="btnResultado"
+		    value="="
+		    action="#{calculadoraController.exibirResultado()}" />
+		    
+		<h:outputLabel name="Resultado"
+		    value="#{calculadoraController.resultado}" />
 	</h:form>
 </h:body>
 
