@@ -8,7 +8,29 @@ public class CalculadoraController {
     private Integer resultado;
     private Integer valor1;
     private Integer valor2;
+    private Double exercicio6;
+    private Double exercicio6Formatado;
     
+    public void formatar() {
+    	exercicio6Formatado = exercicio6;
+    }
+    
+	public Double getExercicio6() {
+		return exercicio6;
+	}
+
+	public void setExercicio6(Double exercicio6) {
+		this.exercicio6 = exercicio6;
+	}
+
+	public Double getExercicio6Formatado() {
+		return exercicio6Formatado;
+	}
+
+	public void setExercicio6Formatado(Double exercicio6Formatado) {
+		this.exercicio6Formatado = exercicio6Formatado;
+	}
+
 	public Integer getResultado() {
 		return resultado;
 	}
