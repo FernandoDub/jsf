@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<h:title>Insert title here</h:title>
 </h:head>
@@ -32,20 +33,76 @@
 		<h:inputText name="campo1" id="campo1"
 		    value="#{calculadoraController.valor1}" />
 		    
-		<h:commandButton name="btnOperacaoSomar" id="btnOperacaoSomar"
-		    value="+" 
-		    action="#{calculadoraController.somar()}"/>
-		   
 		<h:inputText name="campo2" id="campo2"
 		    value="#{calculadoraController.valor2}" />
 		    
-		<h:commandButton id="btnResultado"
-		    value="="
-		    action="#{calculadoraController.exibirResultado()}" />
+		<h:commandButton name="btnOperacaoSomar" id="btnOperacaoSomar"
+		    value="+" 
+		    action="#{calculadoraController.somar()}"/>
+		    
+		<h:commandButton name="btnOperacaoSubtrair" id="btnOperacaoSubtrair"
+		    value="-" 
+		    action="#{calculadoraController.subtrair()}"/>
+		
+		<h:commandButton name="btnOperacaoDividir" id="btnOperacaoDividir"
+		    value="/" 
+		    action="#{calculadoraController.dividir()}"/>
+		    
+		<h:commandButton name="btnOperacaoMultiplicar" id="btnOperacaoMultiplicar"
+		    value="x" 
+		    action="#{calculadoraController.multiplicar()}"/>    
 		    
 		<h:outputLabel name="Resultado"
 		    value="#{calculadoraController.resultado}" />
 	</h:form>
+	
+	<br/>
+	<br/>
+	
+	<h:form>
+	    <h:inputText name="campo3" id="campo3"
+		    value="#{stringController.texto}" />
+		    
+		<h:commandButton name="btnLetraMinuscula" id="btnLetraMinuscula"
+		    value="minúsculo"
+		    action="#{stringController.letraMinuscula()}" />
+		        
+		<h:commandButton name="btnLetraMaiuscula" id="btnLetraMaiuscula"
+		    value="MAIÚSCULO"
+		    action="#{stringController.letraMaiuscula()}" />
+		    
+		<h:outputText name="Minusculo"
+		    value="#{stringController.minusculo}" />    
+		    
+		<h:outputText name="Minusculo"
+		    value="#{stringController.maiusculo}" />    
+    </h:form>
+    
+    <br/>
+    <br/>
+    
+    <h:form>
+        <i>O Fusca é maneiro?</i>
+        <br/>
+        <h:selectBooleanCheckbox />
+        <strong>Sim</strong>
+        <br/>
+        <h:selectBooleanCheckbox />
+        <strong>Não</strong>
+    </h:form>
+    
+    <br/>
+    <br/>
+    
+    <h:form>
+        <i>Selecione o Estado</i>
+        <br/>
+        <h:selectOneMenu value="#{estadosController.estadosSul()}">
+            <f:selectItem itemValue="Paraná" itemLabel="PR" />
+            <f:selectItem itemValue="Santa Catarina" itemLabel="SC" />
+            <f:selectItem itemValue="Rio Grande do Sul" itemLabel="RS" />
+        </h:selectOneMenu>    
+    </h:form>
 </h:body>
 
 </html>

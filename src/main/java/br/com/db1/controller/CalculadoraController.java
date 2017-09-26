@@ -37,6 +37,18 @@ public class CalculadoraController {
 		resultado = valor1 + valor2;
 	}
 	
+	public void subtrair() {
+		resultado = valor1 - valor2;
+	}
+	
+	public void dividir() {
+		resultado = valor1 / valor2;
+	}
+	
+	public void multiplicar() {
+		resultado = valor1 * valor2;
+	}
+	
 	public void exibirResultado() {
 		setResultado(resultado);
 	}
